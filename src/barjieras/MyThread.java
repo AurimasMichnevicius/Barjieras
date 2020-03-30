@@ -18,7 +18,6 @@ public class MyThread extends Thread {
 		MyThread thread1 = new MyThread(barrier);
 		MyThread thread2 = new MyThread(barrier);
 		MyThread thread3 = new MyThread(barrier);
-		
 		thread1.start();
 		thread2.start();
 		thread3.start();
@@ -36,8 +35,10 @@ public class MyThread extends Thread {
 	public void run() {
 		// TODO Auto-generated method stub
 		try {
-			for(int i=0; i<10; i++)
-				System.out.println("Suma turetu būti : 27 o yra : " + this.barrier.wait(i) + " i = " + i);
+			for(int i=0; i<10; i++){
+			this.barrier.waitbarrier();
+                        System.out.println( "ciklo numeris :" + i + " threado numeris: " + this );
+                        }
 		} 
 		catch (InterruptedException e) {
 			// TODO Auto-generated catch block
