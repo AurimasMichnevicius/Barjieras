@@ -8,7 +8,7 @@ package barjieras;
 public class Barjieras
 {
     private int kvietejuSkaicius=0;
-    private int tmpKvietejuSkaicius;
+   // private int tmpKvietejuSkaicius;
     private int barjieroRiba;
     
     public Barjieras(int n) {

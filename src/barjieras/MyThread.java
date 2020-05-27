@@ -5,15 +5,30 @@
  */
 package barjieras;
 
+import static barjieras.GFG.oddEvenSort;
+
 public class MyThread extends Thread {
 	private Barjieras barrier;
 	
 	public MyThread(Barjieras barrier) {
+            
+            
+            
 		this.barrier = barrier;
 	}
 
 	public static void main(String[] args) {
-		int n = 3;
+            
+                    int arr[] = {34, 2, 10, -9}; 
+        int n = arr.length; 
+  
+        oddEvenSort(arr, n); 
+        for (int i=0; i < n; i++) 
+            System.out.print(arr[i] + " "); 
+  
+        System.out.println(" "); 
+            
+		 n = 3;
 		Barjieras barrier = new Barjieras(n);
 		MyThread thread1 = new MyThread(barrier);
 		MyThread thread2 = new MyThread(barrier);
